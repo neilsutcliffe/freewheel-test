@@ -1,6 +1,32 @@
+.App-header {
+  background-color: #113b92;
+  padding: 15px 15px 10px;
+  color: white;
+}
+
+.App-header img {
+  height: 40px;
+}
+
+html,
+body {
+  background-color: #dadada;
+  color: #2d3039;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
 .container {
   max-width: 720px;
   margin: 10px auto 0;
 
   background-color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
