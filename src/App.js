@@ -1,7 +1,8 @@
+import "./App.css";
 import React from "react";
 import logo from "./assets/logo.png";
-import "./App.css";
 import Lines from "./Lines/Lines";
+import CycleHire from "./CycleHire/CycleHire";
 import api from "./api";
 import s from "./App.module.scss";
 
@@ -21,8 +22,6 @@ class App extends React.Component {
   render = () => {
     const { data } = this.state;
 
-    console.log(data);
-
     if (data == null) return <p>Loading...</p>;
 
     return (
@@ -32,6 +31,7 @@ class App extends React.Component {
         </header>
         <div className={s.container}>
           <Lines lines={data} />
+          <CycleHire />
         </div>
       </div>
     );

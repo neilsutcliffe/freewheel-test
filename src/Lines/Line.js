@@ -1,7 +1,6 @@
 import React from "react";
 import Status from "./components/Status";
 import s from "./Line.module.scss";
-import { tsImportEqualsDeclaration } from "@babel/types";
 
 const ExtraInfo = ({ problems }) => {
   if (problems.length === 0) return <p>No service disruptions</p>;

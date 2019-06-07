@@ -1,0 +1,28 @@
+.cycleHire {
+  padding: 10px;
+  border-top: 1px solid #dadada;
+  text-align: left;
+}
+
+.search {
+  margin: 0 auto;
+
+  text-align: center;
+
+  > input {
+    border: 1px solid #113b92;
+    padding: 0.2em 0.5em;
+    font-size: 15px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  > input + input {
+    border-left: 0;
+  }
+
+  > input[type="button"] {
+    background-color: #113b92;
+    color: white;
+    border-radius: 0 3px 3px 0;
+  }
+}
