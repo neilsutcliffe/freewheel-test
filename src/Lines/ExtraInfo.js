@@ -6,7 +6,7 @@ const ExtraInfo = ({ problems }) => {
   return (
     <div>
       <p>Service currently suffering disruptions</p>
-      <ul>
+      <ul className={s.list}>
         {problems.map(problem => (
           <li key={problems.indexOf(problem)}>{problem.reason}</li>
         ))}

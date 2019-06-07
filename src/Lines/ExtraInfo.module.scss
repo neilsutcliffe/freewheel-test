@@ -1,0 +1,14 @@
+.list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    background-color: #fffba9;
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+  }
+
+  li + li {
+    margin-top: 10px;
+  }
+}
