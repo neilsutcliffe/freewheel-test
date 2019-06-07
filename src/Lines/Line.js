@@ -1,38 +1,8 @@
 import React from "react";
-import Status from "./components/Status";
+import Badge from "../components/Badge";
+import ExtraInfo from "./ExtraInfo";
+import AccordionButton from "../components/AccordionButton";
 import s from "./Line.module.scss";
-
-const ExtraInfo = ({ problems }) => {
-  if (problems.length === 0) return <p>No service disruptions</p>;
-  return (
-    <div>
-      <p>Service currently suffering disruptions</p>
-      <ul>
-        {problems.map(problem => (
-          <li key={problems.indexOf(problem)}>{problem.reason}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-const AccordionButton = ({ open, toggle }) => {
-  if (!open) {
-    return (
-      <button className={s.loadButton} onClick={toggle}>
-        More Information
-        <i className="fas fa-chevron-down" />
-      </button>
-    );
-  }
-
-  return (
-    <button className={s.loadButton} onClick={toggle}>
-      Less Information
-      <i className="fas fa-chevron-up" />
-    </button>
-  );
-};
 
 class Line extends React.Component {
   constructor() {
@@ -65,8 +35,15 @@ class Line extends React.Component {
     return (
       <li className={s.list}>
         {line.name}
-        {hasNight ? <span className={s.nightIndicator}>Night</span> : null}
-        <Status statuses={problems} />
+        {hasNight ? <Badge type="info" text={"Night"} /> : null}
+
+        {problems.map(problem => (
+          <Badge
+            type="danger"
+            key={problems.indexOf(problem)}
+            text={problem.statusSeverityDescription}
+          />
+        ))}
         {button}
         {content}
       </li>
