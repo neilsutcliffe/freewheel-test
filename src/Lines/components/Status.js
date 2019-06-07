@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Status.module.scss";
+import s from "../Line.module.scss";
 
 const Status = ({ statuses }) => {
   return statuses.map(status => (
