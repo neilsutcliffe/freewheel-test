@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-import logo from "./assets/logo.png";
 import Lines from "./Lines/Lines";
 import CycleHire from "./CycleHire/CycleHire";
 import api from "./api";
@@ -26,9 +25,6 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} alt="Tigerspike Logo" />
-        </header>
         <div className={s.container}>
           <Lines lines={data} />
           <CycleHire />
